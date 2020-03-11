@@ -1,0 +1,1 @@
+{"version":3,"sources":["/examples/polyfills/index.ts"],"names":[],"mappings":";;;;AAAA,2BAAyB;AACzB,wBAAsB;AACtB,wBAAsB;AACtB,oBAAkB;AAElB,4BAA0B;AAC1B,gCAA8B","file":"index.js","sourcesContent":["import './Object.assign';\nimport './Array.from';\nimport './Array.find';\nimport './cloest';\n\nimport 'promise/polyfill';\nimport 'es6-symbol/implement';\n"]}

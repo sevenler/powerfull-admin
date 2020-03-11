@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>    
+        <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/node_modules/animate.css/animate.css" />
+    <link rel="stylesheet" href="/node_modules/highlight.js/styles/github.css" />
+    <link rel="stylesheet" title="default" href="/scss/themes/default.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/aria/aria.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lineNumbers/lineNumbers.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/controller/textAreaHandler.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/currentLineMarginHighlight/currentLineMarginHighlight.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/decorations/decorations.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/media/scrollbars.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/glyphMargin/glyphMargin.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/indentGuides/indentGuides.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLines.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/linesDecorations/linesDecorations.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/marginDecorations/marginDecorations.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/minimap/minimap.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/overlayWidgets/overlayWidgets.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/rulers/rulers.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/scrollDecoration/scrollDecoration.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/selections/selections.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/viewCursors/viewCursors.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/widget/media/editor.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/widget/media/tokens.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionbar.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/widget/media/diffReview.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/browser/widget/media/diffEditor.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/menu/menu.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/platform/contextview/browser/contextMenuHandler.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/contextview/contextview.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/list/list.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/tree/media/tree.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/standalone/browser/standalone-tokens.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/bracketMatching/bracketMatching.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/clipboard/clipboard.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/message/messageController.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/codeAction/lightBulbWidget.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/codelens/codelensWidget.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/dnd/dnd.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/checkbox/checkbox.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/findInputCheckboxes.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/findInput.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/find/findWidget.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/folding/folding.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/zoneWidget/zoneWidget.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/referenceSearch/media/peekViewWidget.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/iconLabel/iconlabel.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/countBadge/countBadge.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/splitview/splitview.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/referenceSearch/media/referencesWidget.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/goToDefinition/goToDefinitionMouse.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/gotoError/media/gotoErrorWidget.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/colorPicker.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/hover/hover.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/links/links.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/parameterHints/parameterHints.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/rename/renameInputField.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/snippet/snippetSession.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/contrib/suggest/media/suggest.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/standalone/browser/accessibilityHelp/accessibilityHelp.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/standalone/browser/iPadShowKeyboard/iPadShowKeyboard.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/standalone/browser/inspectTokens/inspectTokens.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/keybindingLabel/keybindingLabel.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/parts/tree/browser/tree.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/browser/ui/progressbar/progressbar.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/base/parts/quickopen/browser/quickopen.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/editorQuickOpen.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/gotoLine.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/quickOutline.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/react-datetime/css/react-datetime.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/cropperjs/dist/cropper.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/froala-editor/css/froala_style.min.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/froala-editor/css/froala_editor.pkgd.min.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/video-react/dist/video-react.css" />
+</head>
+<body>
+<script data-loader src="/examples/sdk-mod.js"></script>
+<script type="text/javascript" src="/pkg/examples/sdk-placeholder.html_map.js"></script>
+<script type="text/javascript" src="/pkg/npm.js"></script>
+<script type="text/javascript" src="/examples/polyfills/Object.assign.js"></script>
+<script type="text/javascript" src="/examples/polyfills/Array.from.js"></script>
+<script type="text/javascript" src="/examples/polyfills/Array.find.js"></script>
+<script type="text/javascript" src="/examples/polyfills/cloest.js"></script>
+<script type="text/javascript" src="/examples/polyfills/index.js"></script>
+<script type="text/javascript" src="/src/utils/tpl-lodash.js"></script>
+<script type="text/javascript" src="/src/utils/tpl.js"></script>
+<script type="text/javascript" src="/src/utils/helper.js"></script>
+<script type="text/javascript" src="/src/utils/tpl-builtin.js"></script>
+<script type="text/javascript" src="/src/utils/SimpleMap.js"></script>
+<script type="text/javascript" src="/src/store/iRenderer.js"></script>
+<script type="text/javascript" src="/src/utils/errors.js"></script>
+<script type="text/javascript" src="/src/store/service.js"></script>
+<script type="text/javascript" src="/src/utils/validations.js"></script>
+<script type="text/javascript" src="/src/utils/dom.js"></script>
+<script type="text/javascript" src="/src/components/Overlay.js"></script>
+<script type="text/javascript" src="/src/theme.js"></script>
+<script type="text/javascript" src="/src/components/PopOver.js"></script>
+<script type="text/javascript" src="/src/icons/close.js"></script>
+<script type="text/javascript" src="/src/icons/undo.js"></script>
+<script type="text/javascript" src="/src/icons/redo.js"></script>
+<script type="text/javascript" src="/src/icons/enter.js"></script>
+<script type="text/javascript" src="/src/icons/volume.js"></script>
+<script type="text/javascript" src="/src/icons/mute.js"></script>
+<script type="text/javascript" src="/src/icons/play.js"></script>
+<script type="text/javascript" src="/src/icons/pause.js"></script>
+<script type="text/javascript" src="/src/icons/left-arrow.js"></script>
+<script type="text/javascript" src="/src/icons/right-arrow.js"></script>
+<script type="text/javascript" src="/src/icons/check.js"></script>
+<script type="text/javascript" src="/src/icons/plus.js"></script>
+<script type="text/javascript" src="/src/icons/minus.js"></script>
+<script type="text/javascript" src="/src/icons/pencil.js"></script>
+<script type="text/javascript" src="/src/icons/view.js"></script>
+<script type="text/javascript" src="/src/icons/remove.js"></script>
+<script type="text/javascript" src="/src/icons/retry.js"></script>
+<script type="text/javascript" src="/src/icons/upload.js"></script>
+<script type="text/javascript" src="/src/icons/file.js"></script>
+<script type="text/javascript" src="/src/icons/success.js"></script>
+<script type="text/javascript" src="/src/icons/fail.js"></script>
+<script type="text/javascript" src="/src/icons/search.js"></script>
+<script type="text/javascript" src="/src/icons/back.js"></script>
+<script type="text/javascript" src="/src/icons/move.js"></script>
+<script type="text/javascript" src="/src/icons/info.js"></script>
+<script type="text/javascript" src="/src/components/icons.js"></script>
+<script type="text/javascript" src="/src/utils/api.js"></script>
+<script type="text/javascript" src="/src/types.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Options.js"></script>
+<script type="text/javascript" src="/src/components/Checkbox.js"></script>
+<script type="text/javascript" src="/src/components/Input.js"></script>
+<script type="text/javascript" src="/src/components/Select.js"></script>
+<script type="text/javascript" src="/src/store/formItem.js"></script>
+<script type="text/javascript" src="/src/store/form.js"></script>
+<script type="text/javascript" src="/src/store/combo.js"></script>
+<script type="text/javascript" src="/src/store/crud.js"></script>
+<script type="text/javascript" src="/src/store/table.js"></script>
+<script type="text/javascript" src="/src/store/list.js"></script>
+<script type="text/javascript" src="/src/store/modal.js"></script>
+<script type="text/javascript" src="/src/store/index.js"></script>
+<script type="text/javascript" src="/src/utils/filter-schema.js"></script>
+<script type="text/javascript" src="/src/Scoped.js"></script>
+<script type="text/javascript" src="/src/components/Alert2.js"></script>
+<script type="text/javascript" src="/src/components/404.js"></script>
+<script type="text/javascript" src="/src/components/ModalManager.js"></script>
+<script type="text/javascript" src="/src/components/Modal.js"></script>
+<script type="text/javascript" src="/src/components/Html.js"></script>
+<script type="text/javascript" src="/src/components/Tooltip.js"></script>
+<script type="text/javascript" src="/src/components/TooltipWrapper.js"></script>
+<script type="text/javascript" src="/src/components/Button.js"></script>
+<script type="text/javascript" src="/src/components/Alert.js"></script>
+<script type="text/javascript" src="/src/components/ContextMenu.js"></script>
+<script type="text/javascript" src="/src/components/AsideNav.js"></script>
+<script type="text/javascript" src="/src/components/Checkboxes.js"></script>
+<script type="text/javascript" src="/src/components/Collapse.js"></script>
+<script type="text/javascript" src="/src/components/ColorPicker.js"></script>
+<script type="text/javascript" src="/src/components/calendar/DaysView.js"></script>
+<script type="text/javascript" src="/src/components/calendar/YearsView.js"></script>
+<script type="text/javascript" src="/src/components/calendar/MonthsView.js"></script>
+<script type="text/javascript" src="/src/components/calendar/CalendarContainer.js"></script>
+<script type="text/javascript" src="/src/components/calendar/Calendar.js"></script>
+<script type="text/javascript" src="/src/components/DatePicker.js"></script>
+<script type="text/javascript" src="/src/components/DateRangePicker.js"></script>
+<script type="text/javascript" src="/src/components/Drawer.js"></script>
+<script type="text/javascript" src="/src/components/Tabs.js"></script>
+<script type="text/javascript" src="/src/components/Editor.js"></script>
+<script type="text/javascript" src="/src/components/Layout.js"></script>
+<script type="text/javascript" src="/src/components/Spinner.js"></script>
+<script type="text/javascript" src="/src/components/LazyComponent.js"></script>
+<script type="text/javascript" src="/src/components/Radios.js"></script>
+<script type="text/javascript" src="/src/components/Range.js"></script>
+<script type="text/javascript" src="/src/components/Rating.js"></script>
+<script type="text/javascript" src="/src/components/Switch.js"></script>
+<script type="text/javascript" src="/src/components/Textarea.js"></script>
+<script type="text/javascript" src="/src/components/TitleBar.js"></script>
+<script type="text/javascript" src="/src/components/Toast.js"></script>
+<script type="text/javascript" src="/src/components/Tree.js"></script>
+<script type="text/javascript" src="/src/components/index.js"></script>
+<script type="text/javascript" src="/src/components/ImageGallery.js"></script>
+<script type="text/javascript" src="/src/factory.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Item.js"></script>
+<script type="text/javascript" src="/src/utils/resize-sensor.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/IconPickerIcons.js"></script>
+<script type="text/javascript" src="/src/renderers/Remark.js"></script>
+<script type="text/javascript" src="/src/renderers/Action.js"></script>
+<script type="text/javascript" src="/src/renderers/Alert.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/ButtonGroup.js"></script>
+<script type="text/javascript" src="/src/renderers/ButtonGroup.js"></script>
+<script type="text/javascript" src="/src/renderers/ButtonToolbar.js"></script>
+<script type="text/javascript" src="/src/renderers/DropDownButton.js"></script>
+<script type="text/javascript" src="/src/renderers/Collapse.js"></script>
+<script type="text/javascript" src="/src/renderers/Color.js"></script>
+<script type="text/javascript" src="/src/renderers/CRUD.js"></script>
+<script type="text/javascript" src="/src/renderers/Pagination.js"></script>
+<script type="text/javascript" src="/src/renderers/Cards.js"></script>
+<script type="text/javascript" src="/src/renderers/QuickEdit.js"></script>
+<script type="text/javascript" src="/src/renderers/PopOver.js"></script>
+<script type="text/javascript" src="/src/renderers/Copyable.js"></script>
+<script type="text/javascript" src="/src/renderers/Table.js"></script>
+<script type="text/javascript" src="/src/renderers/Card.js"></script>
+<script type="text/javascript" src="/src/renderers/Date.js"></script>
+<script type="text/javascript" src="/src/renderers/Dialog.js"></script>
+<script type="text/javascript" src="/src/renderers/Divider.js"></script>
+<script type="text/javascript" src="/src/renderers/Each.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/index.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Control.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Hidden.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Text.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Tag.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Number.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Textarea.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Checkboxes.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Checkbox.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/CityDB.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/City.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Rating.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Switch.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Button.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/ButtonToolbar.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Radios.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/List.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Select.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Static.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Date.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/DateRange.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Repeat.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Tree.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/TreeSelect.js"></script>
+<script type="text/javascript" src="/src/renderers/Image.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Image.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/File.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Matrix.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Range.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Combo.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Array.js"></script>
+<script type="text/javascript" src="/src/renderers/Container.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Container.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/SubForm.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/RichText.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Editor.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/DiffEditor.js"></script>
+<script type="text/javascript" src="/src/renderers/Grid.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Grid.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/HBox.js"></script>
+<script type="text/javascript" src="/src/renderers/Panel.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Panel.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Color.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/ChainedSelect.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/NestedSelect.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/TransferSelect.js"></script>
+<script type="text/javascript" src="/src/renderers/Service.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Service.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Table.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Picker.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/IconPicker.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Formula.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/FieldSet.js"></script>
+<script type="text/javascript" src="/src/renderers/Tabs.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Tabs.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/Group.js"></script>
+<script type="text/javascript" src="/src/renderers/Form/InputGroup.js"></script>
+<script type="text/javascript" src="/src/renderers/HBox.js"></script>
+<script type="text/javascript" src="/src/renderers/VBox.js"></script>
+<script type="text/javascript" src="/src/renderers/Images.js"></script>
+<script type="text/javascript" src="/src/renderers/List.js"></script>
+<script type="text/javascript" src="/src/renderers/Operation.js"></script>
+<script type="text/javascript" src="/src/renderers/Page.js"></script>
+<script type="text/javascript" src="/src/renderers/Plain.js"></script>
+<script type="text/javascript" src="/src/renderers/Spinner.js"></script>
+<script type="text/javascript" src="/src/renderers/Tpl.js"></script>
+<script type="text/javascript" src="/src/renderers/Mapping.js"></script>
+<script type="text/javascript" src="/src/renderers/Progress.js"></script>
+<script type="text/javascript" src="/src/renderers/Status.js"></script>
+<script type="text/javascript" src="/src/renderers/Json.js"></script>
+<script type="text/javascript" src="/src/renderers/Link.js"></script>
+<script type="text/javascript" src="/src/renderers/Switch.js"></script>
+<script type="text/javascript" src="/src/renderers/Wizard.js"></script>
+<script type="text/javascript" src="/src/renderers/Chart.js"></script>
+<script type="text/javascript" src="/src/renderers/Video.js"></script>
+<script type="text/javascript" src="/src/renderers/Audio.js"></script>
+<script type="text/javascript" src="/src/renderers/Nav.js"></script>
+<script type="text/javascript" src="/src/renderers/Tasks.js"></script>
+<script type="text/javascript" src="/src/renderers/Drawer.js"></script>
+<script type="text/javascript" src="/src/renderers/Wrapper.js"></script>
+<script type="text/javascript" src="/src/renderers/IFrame.js"></script>
+<script type="text/javascript" src="/src/renderers/QRCode.js"></script>
+<script type="text/javascript" src="/src/renderers/Icon.js"></script>
+<script type="text/javascript" src="/src/renderers/Carousel.js"></script>
+<script type="text/javascript" src="/src/compat.js"></script>
+<script type="text/javascript" src="/src/themes/default.js"></script>
+<script type="text/javascript" src="/src/themes/cxd.js"></script>
+<script type="text/javascript" src="/src/themes/dark.js"></script>
+<script type="text/javascript" src="/src/index.js"></script>
+<script type="text/javascript" src="/examples/embed.js"></script>
+<script type="text/javascript" src="/examples/loader.js"></script>
+<script>
+    /* @require "examples/embed.tsx" */
+    /* @require "examples/loader.ts" */
+    (function (w) {
+        var amis = w.amis || {};
+        amis.resource = {
+            css: css,
+            js: js,
+            moduleId:'examples/embed.tsx'
+        };
+        w.amis = amis;
+    })(window);
+    </script>
+</body>
+</html>

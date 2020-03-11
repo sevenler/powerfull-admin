@@ -1,0 +1,27 @@
+define('examples/components/Form/RichText.jsx', function(require, exports, module) {
+
+  "use strict";
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.default = {
+      $schema: 'https://houtai.baidu.com/v2/schemas/page.json#',
+      title: '富文本编辑器',
+      body: [
+          {
+              type: 'form',
+              api: '/api/mock2/saveForm?waitSeconds=2',
+              title: 'Form elements',
+              controls: [
+                  {
+                      name: 'html',
+                      type: 'rich-text',
+                      label: '富文本',
+                      value: '<p>Just do <code>IT</code></p>'
+                  }
+              ]
+          }
+      ]
+  };
+  //# sourceMappingURL=/examples/components/Form/RichText.js.map
+  
+
+});
